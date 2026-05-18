@@ -70,7 +70,7 @@ exception/
 
 ![Architecture Diagram](docs/architecture/architecture-diagram.png)
 
-## Running the Project
+## Running the Project without Docker
 
 ### Clone repository
 ```bash
@@ -80,6 +80,38 @@ git clone https://github.com/AndreSPy1/pharmacy-inventory-backend.git
 ### Run application
 ```bash
 ./gradlew bootRun
+```
+
+## Docker
+
+### Build the application
+
+```bash
+./gradlew clean build
+```
+
+### Build Docker image
+
+```bash
+docker build -t pharmacy-inventory-backend .
+```
+
+### Run with Docker
+
+```bash
+docker run -p 8080:8080 pharmacy-inventory-backend
+```
+
+### Run with Docker Compose
+
+```bash
+docker compose up --build
+```
+
+The API will be available at:
+
+```text
+http://localhost:8080
 ```
 
 ## API Examples
