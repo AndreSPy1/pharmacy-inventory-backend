@@ -1,3 +1,7 @@
+![Java](https://img.shields.io/badge/Java-21-red)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-3-green)
+![Gradle](https://img.shields.io/badge/Gradle-8-blue)
+![License](https://img.shields.io/badge/license-MIT-purple)
 # Pharmacy Inventory Backend API
 
 Professional backend API for pharmacy inventory, sales management, stock control, and reporting.
@@ -62,18 +66,99 @@ mapper/
 security/
 exception/
 ```
+## Architecture Diagram
 
-### Running the Project
+![Architecture Diagram](docs/architecture/architecture-diagram.png)
 
-## Clone repository
+## Running the Project
+
+### Clone repository
 ```bash
 git clone https://github.com/AndreSPy1/pharmacy-inventory-backend.git
 ```
 
-## Run application
+### Run application
 ```bash
 ./gradlew bootRun
 ```
+
+## API Examples
+
+### Create Product
+
+POST `/api/v1/products`
+
+Request:
+
+```json
+{
+  "name": "Ibuprofen",
+  "barcode": "770999111",
+  "stock": 100,
+  "price": 12000,
+  "category": "Pain Relief"
+}
+```
+
+---
+
+### Register Inventory Movement
+
+POST `/api/v1/inventory-movements`
+
+Request:
+
+```json
+{
+  "productId": 1,
+  "quantity": 20,
+  "type": "IN",
+  "reason": "Supplier delivery"
+}
+```
+
+---
+
+### Create Sale
+
+POST `/api/v1/sales`
+
+Request:
+
+```json
+{
+  "items": [
+    {
+      "productId": 1,
+      "quantity": 2
+    }
+  ]
+}
+```
+
+## Screenshots
+
+### Swagger UI
+
+![Swagger UI](docs/images/swagger-ui.png)
+
+---
+
+### Products API
+
+![Products API](docs/images/products-endpoint.png)
+
+---
+
+### Inventory API
+
+![Inventory API](docs/images/inventory-endpoint.png)
+
+---
+
+### Sales API
+
+![Sales API](docs/images/sales-endpoint.png)
 
 ### Author
 Andres Peña  
