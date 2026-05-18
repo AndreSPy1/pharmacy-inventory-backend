@@ -1,0 +1,6 @@
+services:
+  pharmacy-api:
+    build: .
+    container_name: pharmacy-inventory-backend
+    ports:
+      - "8080:8080"
