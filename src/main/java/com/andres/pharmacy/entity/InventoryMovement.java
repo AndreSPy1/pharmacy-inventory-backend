@@ -23,6 +23,8 @@ public class InventoryMovement {
     @Enumerated(EnumType.STRING)
     private InventoryMovementType type;
 
+    private String reason;
+
     private LocalDateTime createdAt;
 
     @ManyToOne(fetch = FetchType.LAZY)
