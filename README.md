@@ -192,6 +192,14 @@ Request:
 
 ![Sales API](docs/images/sales-endpoint.png)
 
+## Future Improvements
+
+- JWT authentication and role-based access control
+- PostgreSQL production profile
+- Cloud deployment
+- Automated tests
+- CI/CD pipeline
+
 ### Author
 Andres Peña  
 Senior Java Backend Engineer
